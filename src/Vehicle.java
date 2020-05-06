@@ -1,26 +1,32 @@
-public class Vehicle {
+import java.util.ArrayList;
+
+public abstract class Vehicle {
 
     private String type;
+    private int year;
     private String make;
     private String model;
-
     private String color;
     private double price;
     private int qty;
+    private ArrayList<String> features;
 
     //default constructor
     Vehicle() {
         this.type = "default type";
+        this.year = 2020;
         this.make = "default make";
         this.model = "default model";
         this.color = "default color";
         this.price = 0.00;
         this.qty = 0;
+        this.features = new ArrayList<>();
     }
 
     //overloaded constructor
-    Vehicle (String type, String make, String model, String color, double price, int qty) {
+    Vehicle (String type, int year, String make, String model, String color, double price, int qty) {
         this.type = type;
+        this.year = year;
         this.make = make;
         this.model = model;
         this.color = color;
@@ -30,6 +36,14 @@ public class Vehicle {
 
     public String getType() {
         return type;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
+    }
+
+    public int getYear() {
+        return year;
     }
 
     public void setType(String type) {
@@ -74,6 +88,14 @@ public class Vehicle {
 
     public void setQty(int qty) {
         this.qty = qty;
+    }
+
+    public ArrayList<String> getFeatures() {
+        return features;
+    }
+
+    public void setFeatures(String feature) {
+        this.features.add(feature);
     }
 
     public String start() {
