@@ -9,6 +9,26 @@ public class CarApp {
         myCar.setQty(1);
         myCar.setFeatures("GPS");
         myCar.setFeatures("automatic headlights");
-        System.out.println(myCar.toString());
+
+        Car bobsCar = new Car("Bob");
+        bobsCar.setYear(1988);
+        bobsCar.setMake("Volkswagon");
+        bobsCar.setModel("Beetle");
+        bobsCar.setColor("Red");
+        bobsCar.setPrice(12000);
+        bobsCar.setQty(1);
+        bobsCar.setFeatures("FM radio");
+        bobsCar.setFeatures("Rolling windows");
+        System.out.printf("%s: \n" +
+                "Price: $%.2f\n" +
+                "Features: %s\n",
+                myCar.toString(), myCar.getPrice(), myCar.getFeatures());
+        System.out.printf("%s: \n" +
+                        "Price: $%.2f\n" +
+                        "Features: %s\n",
+                bobsCar.toString(), bobsCar.getPrice(), bobsCar.getFeatures());
+        System.out.println(myCar.currentSpeed(80));
+        System.out.println(bobsCar.currentSpeed(35));
+
     }
 }

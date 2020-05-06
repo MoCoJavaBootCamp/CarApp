@@ -13,6 +13,11 @@ public class Car extends Vehicle {
                 this.owner, this.getYear(), this.getMake(), this.getModel());
     }
 
+    @Override
+    public String currentSpeed(int speed) {
+        return String.format("%s is going %d mph.", this.toString(), speed);
+    }
+
     public boolean getNeedsOilChange() {
         return needsOilChange;
     }
